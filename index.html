@@ -2,13 +2,23 @@
 	<head>
 		<style>
 			body{
-    				background-color: #3366CC; /* Цвет фона веб-страницы */
+    				background-color: #9eb8dd; /* Цвет фона веб-страницы */
    			} 
 		</style>
 	</head>
-
 	<body>
 		<div style="margin:50px"><input type="file" name="filename" accept="image/*" /></div>
 		<div style="margin:50px"><input type="file" name="filename" accept="image/*" /></div>
+
+		<div style="margin-left:60px; font-size: 20px" id="output"></div>
+		<div style="margin-left:60px; font-size: 20px" id="output2"></div>
 	</body>
+	<script>
+		element = document.getElementById('output');
+		element.innerHTML = "Type connection: " + navigator.connection.type;
+
+		element = document.getElementById('output2');
+		element.innerHTML = "Effective type connection: " + navigator.connection.effectiveType;
+
+	</script>
 </html>
